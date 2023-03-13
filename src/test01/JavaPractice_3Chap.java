@@ -1,6 +1,6 @@
 package test01;
 
-public class JavaPractice {
+public class JavaPractice_3Chap {
 	public static void main(String[] args) {
 		// 3-2
 		int numOfApples = 151; // 사과의 개수
