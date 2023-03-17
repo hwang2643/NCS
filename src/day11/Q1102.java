@@ -33,7 +33,7 @@ public class Q1102 {
 		
 		int[] n = new int[10];
 		char[] c = new char[10];
-		int cnum;
+		int snum;
 		for(int i=0; i<c.length; i++) {
 			c[i] = '.';
 		}
@@ -54,22 +54,20 @@ public class Q1102 {
 			System.out.print("예약하시겠습니까? ");
 			String s = sc.next();
 			if(s.equals("y")) {
-				System.out.print("예약할 좌석 번호 입력 : ");
-				cnum = sc.nextInt();
-				if(c[cnum-1]=='X') {
-					for(int i=1; true; i++) {
+				while(true) {
+					System.out.print("예약할 좌석 번호 입력 : ");
+					snum = sc.nextInt();
+					if(c[snum-1]=='X') {
 						System.out.println("이미 예약된 좌석입니다. 다시 입력해주세요");
-						System.out.print("예약할 좌석 번호 입력 : ");
-						cnum = sc.nextInt();
-						if(c[cnum-1]!='X') {
-							break;
-						}
+					}else if(c[snum-1]!='X') {
+						break;
 					}
 				}
-				c[cnum-1] = 'X';
+				c[snum-1] = 'X';
 				System.out.println("예약되었습니다.\n");
 				
 			}else if(s.equals("n")) {
+				System.out.println("끝.");
 				break;
 			}
 			
