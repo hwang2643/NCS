@@ -17,12 +17,23 @@ public class Q1203 {
 		int[] arr2 = new int[] {10, 20, 30, 40, 50};
 		int[] arr3 = {10, 20, 30, 40, 50};
 		System.out.println(Arrays.toString(arr1));
+		System.out.print("[");
 		for(int i=0; i<arr2.length; i++) {
-			System.out.print(arr2[i] + " ");
+			System.out.print(arr2[i]);
+			if(i<arr2.length-1) {
+				System.out.print(", ");
+			}
 		}
-		System.out.println();
+		System.out.println("]");
+		int i = 0;
+		System.out.print("[");
 		for(int tmp : arr3) {
-			System.out.print(tmp + " ");
+			System.out.print(tmp);
+			if(i<arr3.length-1) {
+				System.out.print(", ");
+				i++;
+			}
 		}
+		System.out.print("]");
 	}
 }
