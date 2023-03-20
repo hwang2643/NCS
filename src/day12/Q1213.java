@@ -23,7 +23,7 @@ public class Q1213 {
 		System.out.print("정수 입력 : ");
 		String s = sc.next();
 		boolean[] b = new boolean[s.length()];
-		for(int i=0; i<s.length(); i++) {
+		for(int i=0; i<=b.length-1; i++) {
 			if((s.charAt(i)-'0')%2==0) {
 				b[i] = true;
 			}

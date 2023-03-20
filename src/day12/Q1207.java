@@ -22,12 +22,15 @@ public class Q1207 {
 		Scanner sc = new Scanner(System.in);
 		int[] arr = new int[5];
 		int n = 0;
+		int pn = 1;
 		while(true) {
 			
 			int sum = 0;
 			for(int i=0; i<arr.length; i++) {
 				arr[i] = (int)(Math.random()*10);
 			}
+			System.out.print("(#" + pn + ") ");
+			pn++;
 			for(int i=0; i<arr.length; i++) {
 				sum += arr[i];
 				System.out.print(arr[i]);
