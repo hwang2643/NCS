@@ -9,7 +9,7 @@ public class Q1301 {
 		}
 		
 		for(int i=0; i<=b.length-1; i++) {
-			if(b[i]==true) {
+			if(b[i]) {
 				System.out.print((i+1) + " ");
 			}
 		}
