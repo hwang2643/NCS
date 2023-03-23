@@ -16,22 +16,20 @@ public class Q1205 {
 	public static void main(String[] args) {
 		int[] arr1 = new int[3];
 		int[] arr2 = new int[3];
-		for(int i=0; i<arr1.length; i++) {
+		for(int i=0; i<=arr1.length-1; i++) {
 			arr1[i] = (int)(Math.random()*9)+1;
-		}
-		for(int i=0; i<arr2.length; i++) {
 			arr2[i] = (int)(Math.random()*9)+1;
 		}
+		System.out.println("생성된 배열 arr1 : " + Arrays.toString(arr1));
+		System.out.println("생성된 배열 arr1 : " + Arrays.toString(arr2));
 		int sum1 = 0;
 		int sum2 = 0;
-		for(int i=0; i<arr1.length; i++) {
+		for(int i=0; i<=arr1.length-1; i++) {
 			sum1 += arr1[i];
-		}
-		for(int i=0; i<arr2.length; i++) {
 			sum2 += arr2[i];
 		}
-		System.out.println("생성된 배열 arr1 : " + Arrays.toString(arr1) + "\n생성된 배열 arr2 : " + Arrays.toString(arr2));
 		System.out.println("둘 중 더 큰 배열의 이름은 " + (sum1>sum2 ? "arr1" : "arr2") + " 입니다.");
-		System.out.println("배열 " + (sum1>sum2 ? "arr1" : "arr2") + "의 모든 요소의 합은" + (sum1>sum2 ? sum1 : sum2) + " 입니다.");
+		System.out.println("배열 " + (sum1>sum2 ? "arr1" : "arr2") + "의 모든 요소의 합은 " + (sum1>sum2 ? sum1 : sum2) + " 입니다.");
+		
 	}
 }

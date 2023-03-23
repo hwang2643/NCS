@@ -10,14 +10,14 @@ import java.util.Arrays;
 public class Q1201 {
 	public static void main(String[] args) {
 		int[] arr = new int[5];
-		for(int i=0; i<arr.length; i++) {
-			arr[i] = (int)(Math.random()*5) + 1;
+		for(int i=0; i<=arr.length-1; i++) {
+			arr[i] = (int)(Math.random()*5)+1;
 		}
 		System.out.println(Arrays.toString(arr));
 		int sum = 0;
-		for(int i=0; i<arr.length; i++) {
+		for(int i=0; i<=arr.length-1; i++) {
 			sum += arr[i];
 		}
-		System.out.println("요소들의 총합 : " + sum);
+		System.out.println("이 배열의 모든 요소의 총합 : " + sum);
 	}
 }

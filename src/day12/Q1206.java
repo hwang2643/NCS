@@ -9,23 +9,25 @@ import java.util.Random;
 public class Q1206 {
 	public static void main(String[] args) {
 		Random rd = new Random();
-		int[] arr = new int[10000];
-		for(int i=0; i<arr.length; i++) {
+		int[] arr = new int[100000];
+		for(int i=0; i<=arr.length-1; i++) {
 			arr[i] = rd.nextInt();
 		}
-		int even = 0;
 		int odd = 0;
-		for(int i=0; i<arr.length; i++) {
+		int even = 0;
+		for(int i=0; i<=arr.length-1; i++) {
 			if(arr[i]%2==0) {
 				even++;
-			}else {
+			}
+			else {
 				odd++;
 			}
 		}
-		double evenP = (double)((int)(((double)even/arr.length)*10000))/100;
-		double oddP = (double)((int)(((double)odd/arr.length)*10000))/100;
-		
-		System.out.println("이 배열의 홀수의 개수는 " + odd + "개이고" + oddP + "%이다.");
-		System.out.println("이 배열의 짝수의 개수는 " + even + "개이고" + evenP + "%이다.");
+//		double oddP = (double)(int)(((double)odd/arr.length)*10000)/100;
+		double oddP = (double)odd/(arr.length/100);
+		double evenP = (double)even/(arr.length/100);
+//		double evenP = (double)(int)(((double)even/arr.length)*10000)/100;
+		System.out.println("홀수의 개수 : " + odd + " 배열 전체 중 홀수의 퍼센트 : " + oddP + "%");
+		System.out.println("짝수의 개수 : " + even + " 배열 전체 중 짝수의 퍼센트 : " + evenP + "%");
 	}
 }

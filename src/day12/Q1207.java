@@ -20,34 +20,35 @@ import java.util.Scanner;
 public class Q1207 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int[] arr = new int[5];
 		int n = 0;
-		int pn = 1;
+		int qn = 1;
+		int[] arr = new int[5];
 		while(true) {
-			
-			int sum = 0;
-			for(int i=0; i<arr.length; i++) {
+			for(int i=0; i<=arr.length-1; i++) {
 				arr[i] = (int)(Math.random()*10);
 			}
-			System.out.print("(#" + pn + ") ");
-			pn++;
-			for(int i=0; i<arr.length; i++) {
-				sum += arr[i];
+			int sum = 0;
+			System.out.print("(#" + qn + ")");
+			for(int i=0; i<=arr.length-1; i++) {
 				System.out.print(arr[i]);
-				if(i<arr.length-1) {
-					System.out.print(" + ");
+				sum += arr[i];
+				if(i<=arr.length-2) {
+					System.out.print("+");
 				}
 			}
-			System.out.print(" =? ");
-			int in = sc.nextInt();
-			if(sum == in) {
+			System.out.print("=? ");
+			int in =sc.nextInt();
+			if(in == sum) {
 				System.out.println("정답입니다.");
+				qn++;
 				n++;
-			}else if(sum != in) {
-				System.out.print("틀렸습니다. 총 " + n + "문제를 맞췄습니다.");
+			}else {
+				System.out.println("틀렸습니다. 총 " + n + "문제를 맞췄습니다.");
 				break;
 			}
 		}
+		
+		
 		
 	}
 }

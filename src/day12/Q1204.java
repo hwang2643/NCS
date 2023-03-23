@@ -17,12 +17,12 @@ public class Q1204 {
 	public static void main(String[] args) {
 		int[] arr = new int[3];
 		while(true) {
-			for(int i=0; i<arr.length; i++) {
+			for(int i=0; i<=arr.length-1; i++) {
 				arr[i] = (int)(Math.random()*5)+1;
 			}
 			boolean b = true;
-			for(int i=0; i<arr.length-1; i++) {
-				for(int j=i+1; j<arr.length; j++) {
+			for(int i=0; i<=arr.length-2; i++) {
+				for(int j=i+1; j<=arr.length-1; j++) {
 					if(arr[i]==arr[j]) {
 						b = false;
 					}
@@ -32,12 +32,11 @@ public class Q1204 {
 				break;
 			}
 		}
-		System.out.print("생성된 배열은 " + Arrays.toString(arr) + " 입니다.\n");
-		for(int i=0; i<arr.length-1; i++) {
-			for(int j=i+1; j<arr.length; j++) {
+		System.out.println("생성된 배열은 " + Arrays.toString(arr) + " 입니다.");
+		for(int i=0; i<=arr.length-2; i++) {
+			for(int j=i+1; j<=arr.length-1; j++) {
 				if(arr[i]>arr[j]) {
-					int tmp;
-					tmp = arr[i];
+					int tmp = arr[i];
 					arr[i] = arr[j];
 					arr[j] = tmp;
 				}
@@ -45,5 +44,8 @@ public class Q1204 {
 		}
 		int med = arr[arr.length/2];
 		System.out.println("이 배열의 중앙값은 " + med + " 입니다.");
+		
+		
+		
 	}
 }
