@@ -11,10 +11,10 @@ import java.util.Scanner;
 //   				---> sysout("메서드 호출 후, ");
 //   				     showArray(arr);
 public class Q1612 {
-	static int[] addNum(int[] arr, int b) {
-		int[] newArr = new int[arr.length+1];
-		for(int i=0; i<=arr.length-1; i++) {
-			newArr[i] = arr[i];
+	static int[] addNum(int[] a, int b) {
+		int[] newArr = new int[a.length+1];
+		for(int i=0; i<=a.length-1; i++) {
+			newArr[i] = a[i];
 		}
 		newArr[newArr.length-1] = b;
 		return newArr;
@@ -23,16 +23,16 @@ public class Q1612 {
 		System.out.println("배열 = " + Arrays.toString(arr));
 	}
 	public static void main(String[] args) {
-		int[] a = new int[3];
-		for(int i=0; i<=a.length-1; i++) {
-			a[i] = (i+1)*10;
-		}
 		Scanner sc = new Scanner(System.in);
-		showArray(a);
+		int[] arr = new int[3];
+		for(int i=0; i<=arr.length-1; i++) {
+			arr[i] = (i+1)*10;
+		}
+		showArray(arr);
 		System.out.print("추가할 정수 : ");
 		int in = sc.nextInt();
-		a = addNum(a, in);
+		arr = addNum(arr, in);
 		System.out.print("메서드 호출 후, ");
-		showArray(a);
+		showArray(arr);
 	}
 }

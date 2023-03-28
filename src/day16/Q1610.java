@@ -22,6 +22,5 @@ public class Q1610 {
 		System.out.print("정수 입력 : ");
 		String s = sc.next();
 		System.out.println("각 자릿수의 합 = " + add(s));
-		
 	}
 }
