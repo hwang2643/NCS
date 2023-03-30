@@ -28,6 +28,41 @@ class Member {
 }
 
 public class Test2 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		ArrayList<Member> list = new ArrayList<Member>();
+		while(true) {
+			System.out.println("-------------------\n1. 전체회원조회\n2. 회원등록\n3. 회원검색\n4. 회원삭제\n0. 종료\n-------------------");
+			int in = sc.nextInt();
+			switch(in) {
+			case 1 : {
+				showAll(list);
+				break;
+			}
+			case 2 : {
+				addInfo(list);
+				break;
+			}
+			case 3 : {
+				find(list);
+				break;
+			}
+			case 4 : {
+				delete(list);
+				break;
+			}
+			case 0 : {
+				break;
+			}
+			}
+			if(in == 0) {
+				System.out.println("종료");
+				break;
+			}
+			
+		}
+		
+	}
 	static void showAll(ArrayList<Member> list) {
 		if(list.size()<1) {
 			System.out.println("(등록된 회원이 없습니다)");
@@ -93,39 +128,4 @@ public class Test2 {
 		}
 	}
 	
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		ArrayList<Member> list = new ArrayList<Member>();
-		while(true) {
-			System.out.println("-------------------\n1. 전체회원조회\n2. 회원등록\n3. 회원검색\n4. 회원삭제\n0. 종료\n-------------------");
-			int in = sc.nextInt();
-			switch(in) {
-			case 1 : {
-				showAll(list);
-				break;
-			}
-			case 2 : {
-				addInfo(list);
-				break;
-			}
-			case 3 : {
-				find(list);
-				break;
-			}
-			case 4 : {
-				delete(list);
-				break;
-			}
-			case 0 : {
-				break;
-			}
-			}
-			if(in == 0) {
-				System.out.println("종료");
-				break;
-			}
-			
-		}
-		
-	}
 }
