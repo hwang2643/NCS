@@ -73,26 +73,26 @@ public class Test {
 	static void delMem() {
 		System.out.print("삭제할 이름이나 아이디 입력 : ");
 		String del = sc.next();
-		int n = 0;
-		boolean b = false;
+		boolean b2 = false;
+		boolean b1 = false;
 		for(int i=0; i<=list.size()-1; i++) {
 			if(list.get(i).name.equals(del) || list.get(i).id.equals(del)) {
 				System.out.print("비밀번호 입력 : ");
 				int delPw = sc.nextInt();
 				if(list.get(i).pw==delPw) {
 					list.remove(i);
-					break;
+					b2 = true;
 				}else {
 					System.out.println("(비밀번호가 틀렸습니다.)");
-					b = true;
+					b1 = true;
 					break;
 				}
-			}else 
-				n = i+1;
+			}
+				
 		}
-		if(n > list.size()) 
+		if(!b2) 
 			System.out.println("(삭제할 이름이나 아이디가 없습니다.)");
-		else if(b)
+		else if(b1)
 			System.out.println();
 		else
 			System.out.println("삭제되었습니다.");
